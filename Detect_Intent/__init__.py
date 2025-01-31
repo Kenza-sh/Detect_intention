@@ -180,7 +180,7 @@ class IntentionDetector:
         
         # Determine the intention
         if best_index < len(self.phrases_renseigner):
-            return "renseigner"
+            return "renseignement"
         else:
             return "gestion"
 
