@@ -3,6 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import azure.functions as func
 import logging
 import re
+import json
 class IntentionDetector:
     def __init__(self):
         # Define the phrases for training
