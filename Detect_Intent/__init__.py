@@ -183,7 +183,8 @@ class IntentionDetector:
             return "renseignement"
         else:
             return "gestion"
-
+            
+detector = IntentionDetector()
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
@@ -197,7 +198,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 mimetype="application/json",
                 status_code=400
             )
-        detector = IntentionDetector()
+        
         result = detector.detect_intention(query)
 
         return func.HttpResponse(
