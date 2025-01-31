@@ -169,7 +169,7 @@ class IntentionDetector:
 
     def detect_intention(self, reponse):
         if not isinstance(reponse, str) or not reponse.strip():
-            return "renseigner"
+            return "renseignement"
         
         # Transform the user's response
         user_vector = self.vectorizer.transform([reponse])
@@ -182,7 +182,7 @@ class IntentionDetector:
         if best_index < len(self.phrases_renseigner):
             return "renseigner"
         else:
-            return "gérer"
+            return "gestion"
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
